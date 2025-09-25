@@ -1,3 +1,5 @@
+// 作业：自行利用 class 实现简单的程序
+
 namespace exercise3
 {
     // Xen (environment) character
