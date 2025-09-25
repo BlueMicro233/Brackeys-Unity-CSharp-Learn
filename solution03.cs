@@ -6,7 +6,7 @@ namespace exercise3
         // Generic (public) entity
         public string name;
         public int attackSlots;
-        public float health;
+        public int health;
 
         // Action definition: Attack
         public void Attack()
@@ -50,7 +50,7 @@ namespace exercise3
                 Xen headcrab = new Xen();
                 headcrab.name = "Headcrab";
                 headcrab.attackSlots = 5;
-                headcrab.health = 30;
+                headcrab.health = 5;
 
                 // Me
                 Player brownie = new Player();
@@ -58,32 +58,22 @@ namespace exercise3
                 brownie.playerHealth = 100;
                 brownie.protectiveAttackSlot = 2;
 
-                static bool IsKeyPressed()
-                {
-                    if (Console.KeyAvailable)
-                    {
-                        Console.ReadKey(true);
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
 
                 // action
 
                 Console.WriteLine(brownie.name + "! Press Enter to attack!");
-                Console.ReadKey();
 
-                if (IsKeyPressed())
+                int i = 0;
+                for (i = 5; i > 0; i--)
                 {
+                    Console.ReadKey();
                     brownie.protectiveAttack();
                     headcrab.health--;
                     Console.WriteLine("You caused an effective attack!");
                     Console.WriteLine("\n" + headcrab.name + " has " + headcrab.health + " health left");
                 }
-                
+
+                Console.WriteLine("Headcrab has been dead!");
                 Console.ReadKey();
             }
         }
