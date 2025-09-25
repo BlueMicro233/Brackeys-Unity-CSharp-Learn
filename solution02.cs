@@ -1,3 +1,5 @@
+// 作业：使用 Array 或 List 设计一个用户可指定人数的学生名字重排序程序。
+
 using System.Collections.Generic;
 
 namespace ConsoleApp1
