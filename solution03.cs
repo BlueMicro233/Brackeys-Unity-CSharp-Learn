@@ -1,24 +1,6 @@
 namespace exercise3
 {
-    class Player
-    {
-        public float playerHealth;
-        public int protectiveAttackSlot;
-        public string name;
-
-        public void protectiveAttack()
-        {
-            if (protectiveAttackSlot > 0)
-            {
-                Console.WriteLine("PLZ countine your attack! \n");
-            }
-            else
-            {
-                Console.WriteLine("You cannot attack anymore! \n");
-            }
-        }
-    }
-    // Xen character
+    // Xen (environment) character
     class Xen
     {
         // Generic (public) entity
@@ -40,6 +22,26 @@ namespace exercise3
             }
         }
 
+        // Player
+        class Player
+        {
+            public float playerHealth;
+            public int protectiveAttackSlot;
+            public string name;
+
+            public void protectiveAttack()
+            {
+                if (protectiveAttackSlot > 0)
+                {
+                    Console.WriteLine("PLZ countine your attack! \n");
+                }
+                else
+                {
+                    Console.WriteLine("You cannot attack anymore! \n");
+                }
+            }
+        }
+
         class Program
         {
             static void Main(string[] args)
@@ -55,14 +57,33 @@ namespace exercise3
                 brownie.name = "Brownie";
                 brownie.playerHealth = 100;
                 brownie.protectiveAttackSlot = 2;
-                
+
+                static bool IsKeyPressed()
+                {
+                    if (Console.KeyAvailable)
+                    {
+                        Console.ReadKey(true);
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+                // action
+
                 Console.WriteLine(brownie.name + "! Press Enter to attack!");
                 Console.ReadKey();
-                brownie.protectiveAttack();
-                Console.WriteLine("You caused an effective attack!");
-                
-                Console.WriteLine(headcrab.name + " has " + headcrab.health + " health left");
 
+                if (IsKeyPressed())
+                {
+                    brownie.protectiveAttack();
+                    headcrab.health--;
+                    Console.WriteLine("You caused an effective attack!");
+                    Console.WriteLine("\n" + headcrab.name + " has " + headcrab.health + " health left");
+                }
+                
                 Console.ReadKey();
             }
         }
