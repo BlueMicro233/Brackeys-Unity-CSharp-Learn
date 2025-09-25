@@ -1,2 +1,3 @@
 # Brackeys-Unity-CSharp-Learn
-csharp test
+Brackey csharp 入门级学习
+variables, operators, conditions, loops, arrays, module methods, classes
