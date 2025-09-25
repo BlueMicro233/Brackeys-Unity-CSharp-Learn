@@ -4,6 +4,7 @@ namespace ConsoleApp1
         {
             static void Main(string[] args)
             {
+                // Random number generation
                 Random numGen = new Random();
 
                 int roll01 = 0;
@@ -15,7 +16,8 @@ namespace ConsoleApp1
                 while ( (roll01 + roll02) != 6 )
                 {
                     Console.ReadKey();
-                    
+
+                    // Rolling two dices
                     roll01 = numGen.Next(1, 7);
                     roll02  = numGen.Next(1, 7);
                         
@@ -24,7 +26,8 @@ namespace ConsoleApp1
                     
                     attempts++;
                 }
-                
+
+                // Sum
                 Console.WriteLine("You spent "+ attempts +" times rolling a six");
                 
                 Console.ReadKey();
