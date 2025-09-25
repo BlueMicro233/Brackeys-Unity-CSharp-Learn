@@ -1,3 +1,5 @@
+// 作业：随机扔 2 个骰子，直到和为 6 时终止。
+
 namespace ConsoleApp1
 {
     class Program
