@@ -9,4 +9,10 @@ https://youtu.be/N775KsWQVkw?si=svJmL9YUwVe615SX
 
 Now finished: 
 
-Understanding the implementation of Cook-Torrance reflectance model.
+1. Understanding the implementation of Cook-Torrance reflectance model.
+
+## Supplementary Materials
+
+[1] Thomas A.K. Moller et al. Real-Time Rendering 4th
+[2] Epic Games, Real Shading in Unreal Engine 4
+[3] Rendering 4: The First Light. catlikecoding.com/unity/tutorials/rendering/part-4/
