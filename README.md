@@ -14,5 +14,7 @@ Now finished:
 ## Supplementary Materials
 
 [1] Thomas A.K. Moller et al. Real-Time Rendering 4th
+
 [2] Epic Games, Real Shading in Unreal Engine 4
+
 [3] Rendering 4: The First Light. catlikecoding.com/unity/tutorials/rendering/part-4/
